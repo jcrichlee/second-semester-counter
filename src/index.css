@@ -1,13 +1,75 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  height: 100vh;
+  background-color: #333333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-content: center;
+  height: auto;
+}
+
+.counter-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 251, 222);
+  border-radius: 8px;
+  padding: 16px;
+  width: 448px;
+  height: 320px;
+  font-size: 104px;
+  text-align: center;
+}
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  background-color: #14141446;
+  color: #141414;
+  padding: 8px;
+  border-radius: 4px;
+  height: 80px;
+  width: 100%;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.ten {
+  background-color: rgb(228, 255, 228);
+  color: rgb(0, 71, 0);
+}
+.one {
+  background-color: rgb(228, 237, 255);
+  color: rgb(0, 19, 71);
+}
+.clear {
+  background-color: rgb(255, 229, 224);
+  color: tomato;
+}
+
+.ten:hover {
+  color: rgb(228, 255, 228);
+  background-color: rgb(0, 71, 0);
+}
+.one:hover {
+  color: rgb(228, 237, 255);
+  background-color: rgb(0, 19, 71);
+}
+.clear:hover {
+  color: rgb(255, 229, 224);
+  background-color: tomato;
 }
