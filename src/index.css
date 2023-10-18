@@ -31,6 +31,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: right;
+  width: 464px;
   height: 2rem;
   background-color: rgb(41, 40, 35);
   color: bisque;
@@ -45,7 +46,7 @@ body {
   align-items: center;
   background-color: rgb(255, 251, 222);
   border-radius: 0.5rem;
-  width: 100%;
+  width: 480px;
   height: 20rem;
   font-size: 5.5rem;
   text-align: center;
