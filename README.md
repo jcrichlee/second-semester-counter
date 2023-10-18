@@ -36,7 +36,7 @@ function Counter() {
 
   const handleIncreamentOne = (event) => {
     event.preventDefault();
-    if (counter + 1 >= 99999999) setCounter(99999999);
+    if (counter + 1 >= 999999999999999) setCounter(999999999999999);
     else setCounter((prev) => prev + 1);
   };
 
@@ -48,7 +48,7 @@ function Counter() {
 
   const handleIncreamentTen = (event) => {
     event.preventDefault();
-    if (counter + 10 >= 99999999) setCounter(99999999);
+    if (counter + 10 >= 999999999999999) setCounter(999999999999999);
     else setCounter((prev) => prev + 10);
   };
 

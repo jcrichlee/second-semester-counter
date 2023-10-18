@@ -1,37 +1,29 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #333333;
 }
 
 .counter-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 0.5rem;
   align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: center;
-  height: auto;
+  gap: 0.5rem;
 }
 
 .input-field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: right;
-  width: 464px;
+  width: 100%;
+  max-width: 464px;
   height: 2rem;
   background-color: rgb(41, 40, 35);
   color: bisque;
@@ -41,34 +33,32 @@ body {
 }
 
 .counter-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(255, 251, 222);
   border-radius: 0.5rem;
-  width: 480px;
-  height: 20rem;
   font-size: 5.5rem;
   text-align: center;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 100%;
+  max-width: 408px;
+  padding: 1rem;
 }
 .button-container {
   display: flex;
   gap: 0.5rem;
-  justify-content: space-between;
-  flex-direction: row;
   width: 100%;
+  max-width: 480px;
 }
 
 button {
-  border: none;
   background-color: #14141446;
   color: #141414;
   padding: 0.5rem;
+  border: none;
   border-radius: 0.25rem;
-  height: 5rem;
-  width: 100%;
   font-size: 2rem;
   font-weight: 600;
+  width: 100%;
 }
 
 .ten {
@@ -123,12 +113,11 @@ button {
   background-color: darkgreen;
   color: bisque;
 }
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 37.5rem) {
   body {
     flex-direction: column;
   }
   .counter-label {
-    height: 32vh;
     font-size: 4.5rem;
   }
   .not-found-page {
@@ -155,13 +144,6 @@ button {
   }
   .test-error {
     width: 80vw;
-  }
-  .counter-label,
-  .button-container {
-    width: 100%;
-  }
-  .input-field {
-    width: 75vw;
   }
   .counter-container {
     width: 80vw;

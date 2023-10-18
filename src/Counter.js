@@ -10,7 +10,7 @@ function Counter() {
 
   const handleInputChange = (e) => {
     const newValue = parseInt(e.target.value);
-    if (!isNaN(newValue) && newValue >= 0 && newValue <= 99999999) {
+    if (!isNaN(newValue) && newValue >= 0 && newValue <= 999999999999999) {
       setInputValue(newValue);
       setCounter(newValue);
     } else {
@@ -24,7 +24,7 @@ function Counter() {
 
   const handleIncreamentOne = (event) => {
     event.preventDefault();
-    if (counter + 1 >= 99999999) setCounter(99999999);
+    if (counter + 1 >= 999999999999999) setCounter(999999999999999);
     else setCounter((prev) => prev + 1);
   };
 
@@ -36,7 +36,7 @@ function Counter() {
 
   const handleIncreamentTen = (event) => {
     event.preventDefault();
-    if (counter + 10 >= 99999999) setCounter(99999999);
+    if (counter + 10 >= 999999999999999) setCounter(999999999999999);
     else setCounter((prev) => prev + 10);
   };
 
@@ -50,19 +50,10 @@ function Counter() {
     event.preventDefault();
     setCounter(0);
   };
+  
 
   return (
     <section className="counter-container">
-      <ErrorBoundary>
-        <input
-          type="number"
-          value={inputValue}
-          onChange={handleInputChange}
-          onClick={handleInputClick}
-          className="input-field"
-          placeholder="0"
-        />
-      </ErrorBoundary>
       <ErrorBoundary>
         <NumericFormat
           className="counter-label"
@@ -89,6 +80,16 @@ function Counter() {
           &#10227;
         </button>
       </div>
+      <ErrorBoundary>
+        <input
+          type="number"
+          value={inputValue}
+          onChange={handleInputChange}
+          onClick={handleInputClick}
+          className="input-field"
+          placeholder="0"
+        />
+      </ErrorBoundary>
     </section>
   );
 }
