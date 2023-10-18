@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Counter from "./Counter";
 import NotFoundPage from "./404";
 import ErrorBoundary from "./ErrorBoundary";
