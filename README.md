@@ -1,71 +1,182 @@
-# Getting Started with Create React App
+# Second Semeter Examination - Counter App - Readme Documentaion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my second semester exam React application! This readme provides an overview of the different pages and components within my application. It also provides instructions for running the application locally.
 
-## Available Scripts
+## Table of Contents
+- [Pages](#pages)
+  - [Counter Page](#counter-page)
+  - [Not Found Page](#not-found-page)
+- [Components](#components)
+  - [Error Boundary](#error-boundary)
+- [Getting Started](#getting-started)
+- [Additional Notes](#additional-notes)
 
-In the project directory, you can run:
+## Pages
 
-### `npm start`
+### 1. **Counter Page**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Counter Page features a numeric counter with various interactive buttons for incrementing and decrementing the displayed number. The counter value is formatted with thousands separators for easy readability.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Usage
 
-### `npm test`
+- **Increment by One:** Click the "single up arrow" button to increase the counter by 1.
+- **Decrement by One:** Click the "single down arrow" button to decrease the counter by 1.
+- **Increment by Ten:** Click the "double up arrow" button to increase the counter by 10.
+- **Decrement by Ten:** Click the "double down arrow" button to decrease the counter by 10.
+- **Clear Counter:** Click the "refresh" button to reset the counter to 0.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Code Snippet
 
-### `npm run build`
+```jsx
+import { useState } from "react";
+import { NumericFormat } from "react-number-format";
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+function Counter() {
+  const [counter, setCounter] = useState(0);
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  const handleIncreamentOne = (event) => {
+    event.preventDefault();
+    if (counter + 1 >= 99999999) setCounter(99999999);
+    else setCounter((prev) => prev + 1);
+  };
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  const handleDecreamentOne = (event) => {
+    event.preventDefault();
+    if (counter - 1 <= 0) setCounter(0);
+    else setCounter((prev) => prev - 1);
+  };
 
-### `npm run eject`
+  const handleIncreamentTen = (event) => {
+    event.preventDefault();
+    if (counter + 10 >= 99999999) setCounter(99999999);
+    else setCounter((prev) => prev + 10);
+  };
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  const handleDecreamentTen = (event) => {
+    event.preventDefault();
+    if (counter - 10 <= 0) setCounter(0);
+    else setCounter((prev) => prev - 10);
+  };
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  const handleClear = (event) => {
+    event.preventDefault();
+    setCounter(0);
+  };
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  return (
+    <section className="counter-container">
+      <NumericFormat
+        className="counter-label"
+        value={counter}
+        displayType={"text"}
+        thousandSeparator={true}
+        thousandsGroupStyle="thousand"
+      />
+      <div className="button-container">
+        <button className="action-button ten" onClick={handleDecreamentTen}>
+          &#8650;
+        </button>
+        <button className="action-button one" onClick={handleDecreamentOne}>
+          &#129027;
+        </button>
+        <button className="action-button one" onClick={handleIncreamentOne}>
+          &#129025;
+        </button>
+        <button className="action-button ten" onClick={handleIncreamentTen}>
+          &#8648;
+        </button>
+        <button className="action-button clear" onClick={handleClear}>
+          &#10227;
+        </button>
+      </div>
+    </section>
+  );
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2. **Not Found Page**
 
-## Learn More
+The Not Found Page is displayed when a user tries to access a non-existent page. It provides a friendly error message and a button to navigate back to the home page.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Return Home:** Click the "Take me home" button to navigate back to the home page.
 
-### Code Splitting
+#### Code Snippet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```jsx
+function NotFoundPage() {
+  return [
+    <section className="not-found-page">
+      <h1 className="not-found">Oh no! - 404 Error</h1>,
+      <p className="body-text">We can't find the page you're looking for 😪.</p>
+      ,
+      <button className="not-found-btn">
+        <a href="./">Take me home</a>
+      </button>
+      ,
+    </section>,
+  ];
+}
+```
 
-### Analyzing the Bundle Size
+## Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 1. **Error Boundary**
 
-### Making a Progressive Web App
+The Error Boundary component is used to catch JavaScript errors anywhere in a component tree and log those errors, and display a fallback UI in case of an error.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Usage
 
-### Advanced Configuration
+- Wrap components with `<ErrorBoundary>` to catch and handle errors gracefully.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Code Snippet
 
-### Deployment
+```jsx
+class ErrorBoundary extends React.Component {
+  state = {
+    hasError: true,
+    errorMessage: "There is an error",
+  };
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  static getDerivedStateFromError(error) {
+    return { hasError: true, errorMessage: error };
+  }
 
-### `npm run build` fails to minify
+  componentDidCatch(error, info) {
+    console.log(error, info);
+  }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# second-semester-counter
+  render() {
+    if (this.state.hasError) {
+      return <h1 className="test-error">{this.state.errorMessage}</h1>;
+    }
+    return this.props.children;
+  }
+}
+```
+
+## Getting Started
+
+1. **Prerequisites:**
+   - Make sure you have Node.js and npm installed.
+  
+2. **Installation:**
+   ```bash
+   npm install
+   ```
+
+3. **Running the Application:**
+   ```bash
+   npm start
+   ```
+
+   This command will start the development server. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Additional Notes
+
+- This application uses React for building the user interface components.
+- Error boundaries are implemented using the `<ErrorBoundary>` component to handle unexpected errors gracefully.
+- The counter component is designed with interactive buttons and formatted numeric display for a user-friendly experience.
+
+Feel free to explore the code, modify components, and customize the application according to your requirements. Happy coding! 🚀

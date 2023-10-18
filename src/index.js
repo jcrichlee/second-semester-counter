@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import ErrorBoundary from "./ErrorBoundary";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ErrorBoundary fallback="There is an error. Press F5 to refresh">
+    <BrowserRouter>
       <App />
-    </ErrorBoundary>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
