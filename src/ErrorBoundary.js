@@ -2,7 +2,7 @@ import React from "react";
 
 class ErrorBoundary extends React.Component {
   state = {
-    hasError: false,
+    hasError: true,
     errorMessage: "There is an error",
   };
 

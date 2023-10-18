@@ -107,6 +107,7 @@ button {
   background-color: bisque;
   color: darkgreen;
   padding: 0 2.5rem;
+  height: 3.5rem;
   cursor: crosshair;
 }
 .not-found-btn:hover {
@@ -139,7 +140,6 @@ button {
     width: 100%;
   }
   .not-found-btn {
-    height: 3.5rem;
     width: 100%;
     font-size: 1.5rem;
   }
