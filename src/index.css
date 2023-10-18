@@ -23,11 +23,11 @@ body {
 .input-field {
   text-align: right;
   width: 100%;
-  max-width: 464px;
+  max-width: 29rem;
   height: 2rem;
   background-color: rgb(41, 40, 35);
   color: bisque;
-  font-size: 32px;
+  font-size: 2rem;
   border-radius: 0.5rem;
   padding: 1rem 1rem 1rem 0;
 }
@@ -40,14 +40,14 @@ body {
   white-space: pre-wrap;
   word-wrap: break-word;
   width: 100%;
-  max-width: 408px;
+  max-width: 25.5rem;
   padding: 1rem;
 }
 .button-container {
   display: flex;
   gap: 0.5rem;
   width: 100%;
-  max-width: 480px;
+  max-width: 30rem;
 }
 
 button {
@@ -139,6 +139,7 @@ button {
     width: 100%;
   }
   .not-found-btn {
+    height: 3.5rem;
     width: 100%;
     font-size: 1.5rem;
   }
@@ -155,10 +156,10 @@ button {
 }
 @media screen and (max-width: 18.125rem) {
   .input-field {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .counter-label {
-    font-size: 32px;
+    font-size: 2rem;
   }
   .button-container {
     flex-direction: column;
