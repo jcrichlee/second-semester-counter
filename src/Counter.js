@@ -1,9 +1,26 @@
 import "./App.css";
+import React from "react";
 import { useState } from "react";
 import { NumericFormat } from "react-number-format";
+import ErrorBoundary from "./ErrorBoundary";
 
 function Counter() {
   const [counter, setCounter] = useState(0);
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (e) => {
+    const newValue = parseInt(e.target.value);
+    if (!isNaN(newValue) && newValue >= 0 && newValue <= 99999999) {
+      setInputValue(newValue);
+      setCounter(newValue);
+    } else {
+      setInputValue("");
+    }
+  };
+
+  const handleInputClick = () => {
+    setInputValue("");
+  };
 
   const handleIncreamentOne = (event) => {
     event.preventDefault();
@@ -36,6 +53,17 @@ function Counter() {
 
   return (
     <section className="counter-container">
+      <ErrorBoundary>
+      <input
+          type="number"
+          value={inputValue}
+          onChange={handleInputChange}
+          onClick={handleInputClick}
+          className="input-field"
+          placeholder="0"
+        />
+      </ErrorBoundary>
+      <ErrorBoundary>
       <NumericFormat
         className="counter-label"
         value={counter}
@@ -43,6 +71,7 @@ function Counter() {
         thousandSeparator={true}
         thousandsGroupStyle="thousand"
       />
+      </ErrorBoundary>
       <div className="button-container">
         <button className="action-button ten" onClick={handleDecreamentTen}>
           &#8650;
