@@ -2,7 +2,6 @@ import "./App.css";
 import React from "react";
 import { useState } from "react";
 import { NumericFormat } from "react-number-format";
-import ErrorBoundary from "./ErrorBoundary";
 
 function Counter() {
   const [counter, setCounter] = useState(0);
