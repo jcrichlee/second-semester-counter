@@ -54,7 +54,6 @@ function Counter() {
 
   return (
     <section className="counter-container">
-      <ErrorBoundary>
         <NumericFormat
           className="counter-label"
           value={counter}
@@ -62,7 +61,6 @@ function Counter() {
           thousandSeparator={true}
           thousandsGroupStyle="thousand"
         />
-      </ErrorBoundary>
       <div className="button-container">
         <button className="action-button ten" onClick={handleDecreamentTen}>
           &#8650;
@@ -80,7 +78,6 @@ function Counter() {
           &#10227;
         </button>
       </div>
-      <ErrorBoundary>
         <input
           type="number"
           value={inputValue}
@@ -89,7 +86,6 @@ function Counter() {
           className="input-field"
           placeholder="0"
         />
-      </ErrorBoundary>
     </section>
   );
 }
