@@ -48,10 +48,10 @@ function Counter() {
           &#8650;
         </button>
         <button className="action-button one" onClick={handleDecreamentOne}>
-          &#129027;
+          &#11015;
         </button>
         <button className="action-button one" onClick={handleIncreamentOne}>
-          &#129025;
+          &#11014;
         </button>
         <button className="action-button ten" onClick={handleIncreamentTen}>
           &#8648;

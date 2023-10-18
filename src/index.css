@@ -27,11 +27,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(255, 251, 222);
-  border-radius: 8px;
-  padding: 16px;
-  width: 448px;
-  height: 320px;
-  font-size: 104px;
+  border-radius: .5rem;
+  padding: 1rem;
+  width: 28rem;
+  height: 20rem;
+  font-size: 6.5rem;
   text-align: center;
 }
 .button-container {
@@ -44,11 +44,11 @@ button {
   border: none;
   background-color: #14141446;
   color: #141414;
-  padding: 8px;
-  border-radius: 4px;
-  height: 80px;
+  padding: .5rem;
+  border-radius: .25rem;
+  height: 5rem;
   width: 100%;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -97,10 +97,45 @@ button {
 .not-found-btn {
   background-color: bisque;
   color: darkgreen;
-  padding: 0 40px;
+  padding: 0 2.5rem;
   cursor: crosshair;
 }
 .not-found-btn:hover {
   background-color: darkgreen;
   color: bisque;
+}
+@media screen and (max-width: 50rem) {
+  body {
+    flex-direction: column;
+  }
+  .counter-label {
+    width: 80vw;
+    height: 32vh;
+    font-size: 4.5rem;
+  }
+ .not-found-page {
+  width: 80vw;
+  gap: 0;
+  }
+  .test-error,
+  .not-found {
+    font-size: 3.5rem;
+    line-height: 100%;
+    text-align: center;
+  }
+  .body-text {
+    font-size: 1.5rem;
+    line-height: 160%;
+    text-align: center;
+  }
+  .not-found-btn-container{
+    width: 100%;
+  }
+  .not-found-btn {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .test-error{
+    width: 80vw;
+  }
 }

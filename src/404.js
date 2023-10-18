@@ -6,7 +6,7 @@ function NotFoundPage() {
       <h1 className="not-found">Oh no! - 404 Error</h1>,
       <p className="body-text">We can't find the page you're looking for 😪.</p>
       ,
-      <a href="./">
+      <a href="./" className="not-found-btn-container">
         <button className="not-found-btn">Take me home</button>
       </a>
       ,
