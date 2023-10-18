@@ -96,15 +96,11 @@ button {
 }
 .not-found-btn {
   background-color: bisque;
-  width: fit-content;
-  padding: 0 16px;
-}
-button:hover {
-  background-color: rgb(212, 163, 103);
-}
-a {
   color: darkgreen;
-  text-decoration: none;
-  width: 100%;
-  height: 100%;
+  padding: 0 40px;
+  cursor: crosshair;
+}
+.not-found-btn:hover {
+  background-color: darkgreen;
+  color: bisque;
 }
