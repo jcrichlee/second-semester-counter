@@ -148,6 +148,10 @@ button {
   .counter-container {
     width: 80vw;
   }
+  .counter-label,
+  .input-field {
+    max-width: 30rem;
+  }
 }
 @media screen and (max-width: 18.125rem) {
   .input-field {
