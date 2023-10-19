@@ -3,7 +3,7 @@ import React from "react";
 class ErrorBoundary extends React.Component {
   state = {
     hasError: true,
-    errorMessage: "There is an error",
+    errorMessage: "GenZ crashed the counter App 😱",
   };
 
   static getDerivedStateFromError(error) {
@@ -16,7 +16,15 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
-      return <h1 className="test-error">{this.state.errorMessage}</h1>;
+      return [
+        <section className="test-error-page">
+          <h1 className="test-error">GenZs crashed the counter App 😱</h1>
+          <p className="body-text">Prepare for world domination by the GenZssss 👽👽👽</p>
+          <a href="./" className="test-error-btn-container">
+            <button className="test-error-btn">Take me home</button>
+          </a>
+        </section>
+      ];  
     }
     return this.props.children;
   }

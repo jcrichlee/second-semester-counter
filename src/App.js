@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Counter />} />
         <Route path="/test-error" element={<ErrorBoundary />} />
-        <Route path="404" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );

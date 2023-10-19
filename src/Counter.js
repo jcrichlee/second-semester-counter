@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import { useState } from "react";
 import { NumericFormat } from "react-number-format";
+import Ages from "./Ages";
 
 function Counter() {
   const [counter, setCounter] = useState(0);
@@ -49,17 +50,16 @@ function Counter() {
     event.preventDefault();
     setCounter(0);
   };
-  
 
   return (
     <section className="counter-container">
-        <NumericFormat
-          className="counter-label"
-          value={counter}
-          displayType={"text"}
-          thousandSeparator={true}
-          thousandsGroupStyle="thousand"
-        />
+      <NumericFormat
+        className="counter-label"
+        value={counter}
+        displayType={"text"}
+        thousandSeparator={true}
+        thousandsGroupStyle="thousand"
+      />
       <div className="button-container">
         <button className="action-button ten" onClick={handleDecreamentTen}>
           &#8650;
@@ -77,14 +77,21 @@ function Counter() {
           &#10227;
         </button>
       </div>
-        <input
-          type="number"
-          value={inputValue}
-          onChange={handleInputChange}
-          onClick={handleInputClick}
-          className="input-field"
-          placeholder="0"
-        />
+      <input
+        type="number"
+        value={inputValue}
+        onChange={handleInputChange}
+        onClick={handleInputClick}
+        className="input-field"
+        placeholder="0"
+      />
+      <div>
+        <Ages />
+      </div>
+      <footer className="footer">
+        <a href="./updates">✨ Check out next Semester's Questions ✨</a>
+        <p className="footer-text">Made with ❤️ by {"JCRichLee"}</p>
+      </footer>
     </section>
   );
 }
