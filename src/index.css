@@ -152,10 +152,6 @@ button {
   background-color: thistle;
   color: #141414;
 }
-.ages button a{
-  color: thistle;
-  text-decoration: none;
-}
 footer{
   color: aliceblue;
   display: flex;
