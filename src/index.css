@@ -160,8 +160,10 @@ footer{
   align-items: center;
   gap: 1rem;
 }
-footer a{
+footer a,
+footer p{
   padding-left: .5rem;
+  text-align: center;
 }
 @media screen and (max-width: 37.5rem) {
   body {
@@ -207,6 +209,11 @@ footer a{
   .counter-label,
   .input-field {
     max-width: 30rem;
+  }
+}
+@media screen and (max-width: 23.4375rem) {
+  .ages{
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 18.125rem) {
