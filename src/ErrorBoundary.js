@@ -2,7 +2,7 @@ import React from "react";
 
 class ErrorBoundary extends React.Component {
   state = {
-    hasError: true,
+    hasError: false,
     errorMessage: "GenZ crashed the counter App 😱",
   };
 
