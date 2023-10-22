@@ -8,3 +8,37 @@ second-semester-counter-app@0.1.0 C:\Users\JCRichLee\Documents\altschool\secondS
 ├── react-scripts@5.0.1
 ├── react@18.2.0
 └── web-vitals@2.1.4
+
+project-folder
+│
+├── public
+│   ├── _redirects
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+│
+├── src
+│   ├── 404.js
+│   ├── AgeError.js
+│   ├── Ages.js
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── Counter.js
+│   ├── ErrorBoundary.js
+│   ├── ErrorBoundaryTest.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+│
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── README.md
+└── requirements.txt
