@@ -1,44 +1,9 @@
-second-semester-counter-app@0.1.0 C:\Users\JCRichLee\Documents\altschool\secondSemester\react\second-semester-counter-app
-├── @testing-library/jest-dom@5.17.0
-├── @testing-library/react@13.4.0
-├── @testing-library/user-event@13.5.0
-├── react-dom@18.2.0
-├── react-number-format@5.3.1
-├── react-router-dom@6.17.0
-├── react-scripts@5.0.1
-├── react@18.2.0
-└── web-vitals@2.1.4
-
-project-folder
-│
-├── public
-│   ├── _redirects
-│   ├── favicon.ico
-│   ├── favicon.png
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   └── robots.txt
-│
-├── src
-│   ├── 404.js
-│   ├── AgeError.js
-│   ├── Ages.js
-│   ├── App.css
-│   ├── App.js
-│   ├── App.test.js
-│   ├── Counter.js
-│   ├── ErrorBoundary.js
-│   ├── ErrorBoundaryTest.js
-│   ├── index.css
-│   ├── index.js
-│   ├── logo.svg
-│   ├── reportWebVitals.js
-│   └── setupTests.js
-│
-├── .gitignore
-├── package-lock.json
-├── package.json
-├── README.md
-└── requirements.txt
+@testing-library/jest-dom==5.17.0
+@testing-library/react==13.4.0
+@testing-library/user-event==13.5.0
+react-dom==18.2.0
+react-number-format==5.3.1
+react-router-dom==6.17.0
+react-scripts==5.0.1
+react==18.2.0
+web-vitals==2.1.4
