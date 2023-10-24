@@ -10,16 +10,11 @@ function Counter() {
 
   const handleInputChange = (e) => {
     const newValue = parseInt(e.target.value);
-    const regex = /^[0-9]*$/;
     if (!isNaN(newValue) && newValue >= 0 && newValue <= 999999999999999) {
       setInputValue(newValue);
       setCounter(newValue);
     } else {
       setInputValue("");
-    }
-    if (regex.test(newValue)) {
-      setInputValue(newValue);
-      setCounter(parseInt(newValue, 10));
     }
   };
 
