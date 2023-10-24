@@ -10,11 +10,16 @@ function Counter() {
 
   const handleInputChange = (e) => {
     const newValue = parseInt(e.target.value);
+    const regex = /^[0-9]*$/;
     if (!isNaN(newValue) && newValue >= 0 && newValue <= 999999999999999) {
       setInputValue(newValue);
       setCounter(newValue);
     } else {
       setInputValue("");
+    }
+    if (regex.test(newValue)) {
+      setInputValue(newValue);
+      setCounter(parseInt(newValue, 10));
     }
   };
 
@@ -120,7 +125,8 @@ function Counter() {
       <footer className="footer">
         <a href="./updates">✨ Check out next Semester's Questions ✨</a>
         <p className="footer-text">
-          Made with ❤️ by<a
+          Made with ❤️ by
+          <a
             href="https://github.com/jcrichlee"
             target="_blank"
             rel="noopener noreferrer"
