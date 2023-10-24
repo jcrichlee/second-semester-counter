@@ -1,8 +1,8 @@
-import "./App.css";
+import "../App.css";
 import React from "react";
 import { useState } from "react";
 import { NumericFormat } from "react-number-format";
-import Ages from "./Ages";
+import Ages from "../components/Ages";
 
 function Counter() {
   const [counter, setCounter] = useState(0);
@@ -59,21 +59,48 @@ function Counter() {
         displayType={"text"}
         thousandSeparator={true}
         thousandsGroupStyle="thousand"
+        data-tooltip-content={counter}
+        data-tooltip-id="my-tooltip"
       />
       <div className="button-container">
-        <button className="action-button ten" onClick={handleDecreamentTen}>
+        <button
+          className="action-button ten"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Decrease by 10"
+          onClick={handleDecreamentTen}
+        >
           &#8650;
         </button>
-        <button className="action-button one" onClick={handleDecreamentOne}>
+        <button
+          className="action-button one"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Decrease by 1"
+          onClick={handleDecreamentOne}
+        >
           &#11015;
         </button>
-        <button className="action-button one" onClick={handleIncreamentOne}>
+        <button
+          className="action-button one"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Increase by 1"
+          onClick={handleIncreamentOne}
+        >
           &#11014;
         </button>
-        <button className="action-button ten" onClick={handleIncreamentTen}>
+        <button
+          className="action-button ten"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Increase by 10"
+          onClick={handleIncreamentTen}
+        >
           &#8648;
         </button>
-        <button className="action-button clear" onClick={handleClear}>
+        <button
+          className="action-button clear"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Clear counter"
+          onClick={handleClear}
+        >
           &#10227;
         </button>
       </div>
@@ -84,13 +111,26 @@ function Counter() {
         onClick={handleInputClick}
         className="input-field"
         placeholder="0"
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="Enter a number manually"
       />
       <div>
         <Ages />
       </div>
       <footer className="footer">
         <a href="./updates">✨ Check out next Semester's Questions ✨</a>
-        <p className="footer-text">Made with ❤️ by {"JCRichLee"}</p>
+        <p className="footer-text">
+          Made with ❤️ by{" "}
+          <a
+            href="https://github.com/jcrichlee"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-tooltip-content={"JCRichLee on GitHub"}
+            data-tooltip-id="my-tooltip"
+          >
+            {"JCRichLee"}
+          </a>
+        </p>
       </footer>
     </section>
   );

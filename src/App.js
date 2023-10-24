@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Counter from "./Counter";
-import NotFoundPage from "./404";
-import ErrorBoundary from "./ErrorBoundary";
-import ErrorBoundaryTest from "./ErrorBoundaryTest";
+import Counter from "./pages/Counter";
+import NotFoundPage from "./pages/404";
+import ErrorBoundary from "./components/ErrorBoundary";
+import ErrorBoundaryTest from "./components/ErrorBoundaryTest";
 
 function App() {
   return (

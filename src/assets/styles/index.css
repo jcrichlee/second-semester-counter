@@ -165,6 +165,9 @@ footer p{
   padding-left: .5rem;
   text-align: center;
 }
+.footer-text a{
+  color: aliceblue;
+}
 @media screen and (max-width: 37.5rem) {
   body {
     flex-direction: column;

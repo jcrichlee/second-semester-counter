@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 const Ages = () => {
   const navigate = useNavigate();
@@ -20,10 +21,29 @@ const Ages = () => {
     <div className="all-ages">
       <h1>Testing ErrorBoundary</h1>
       <div className="ages">
-        <button onClick={millenial}>BF. 96</button>
-        <button onClick={genX}>96 - 99</button>
-        <button onClick={genZ}>AF. 99</button>
+        <button
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Before 1996"
+          onClick={millenial}
+        >
+          BF. 96
+        </button>
+        <button
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="1996 to 1999"
+          onClick={genX}
+        >
+          96 - 99
+        </button>
+        <button
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="After 1999"
+          onClick={genZ}
+        >
+          AF. 99
+        </button>
       </div>
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };
