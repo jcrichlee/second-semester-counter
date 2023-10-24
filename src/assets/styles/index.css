@@ -25,7 +25,9 @@
   font-size: 1rem;
   font-weight: 900;
 }
-
+#my-tooltip {
+  animation: fadeIn 0.3s ease-in-out;
+}
 a {
   text-decoration: none;
   color: bisque;
@@ -39,14 +41,39 @@ body {
   min-height: 100vh;
   background-color: #333333;
 }
-
 .counter-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
 }
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.counter-container,
+.test-error-page,
+.not-found-page {
+  animation: fadeIn 2s cubic-bezier(1, 0, 0, 1);
+}
+.ten,
+.one,
+.clear,
+.test-error-btn,
+.not-found-btn {
+  transition: transform 0.2s ease-in-out;
+}
+.ten:hover,
+.one:hover,
+.clear:hover,
+.test-error-btn:hover,
+.not-found-btn:hover {
+  transform: scale(1.1);
+}
 .input-field {
   text-align: right;
   width: 100%;
@@ -58,7 +85,6 @@ body {
   border-radius: 0.5rem;
   padding: 1rem 1rem 1rem 0;
 }
-
 .counter-label {
   background-color: transparent;
   color: bisque;
@@ -78,7 +104,6 @@ body {
   width: 100%;
   max-width: 30rem;
 }
-
 button {
   background-color: #14141446;
   color: #141414;
@@ -89,7 +114,6 @@ button {
   font-weight: 600;
   width: 100%;
 }
-
 .ten {
   background-color: rgb(228, 255, 228);
   color: rgb(0, 71, 0);
@@ -102,7 +126,6 @@ button {
   background-color: rgb(255, 229, 224);
   color: tomato;
 }
-
 .ten:hover {
   color: rgb(228, 255, 228);
   background-color: rgb(0, 71, 0);
@@ -199,7 +222,6 @@ footer p {
   .counter-label {
     font-size: 4.5rem;
   }
-
   .all-ages h1 {
     font-size: 2rem;
     text-align: center;
@@ -268,7 +290,6 @@ footer p {
     font-size: 1rem;
     text-align: center;
   }
-
   .all-ages {
     padding-top: 0.75rem;
   }
@@ -278,7 +299,6 @@ footer p {
     font-size: 0.75rem;
     text-align: center;
   }
-
   .all-ages {
     padding-top: 0.5rem;
   }
