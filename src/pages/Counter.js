@@ -26,7 +26,7 @@ function Counter() {
     event.preventDefault();
     if (counter + 1 >= 999999999999999) setCounter(999999999999999);
     else setCounter((prev) => prev + 1);
-    if (counter + 1 >= 999999999999999) alert("You can't go above 999999999999999");
+    if (counter + 1 >= 999999999999999) alert("You can't go above 999,999,999,999,999");
   };
 
   const handleDecreamentOne = (event) => {
@@ -40,7 +40,7 @@ function Counter() {
     event.preventDefault();
     if (counter + 10 >= 999999999999999) setCounter(999999999999999);
     else setCounter((prev) => prev + 10);
-    if (counter + 10 >= 999999999999999) alert("You can't go above 999999999999999");
+    if (counter + 10 >= 999999999999999) alert("You can't go above 999,999,999,999,999");
   };
 
   const handleDecreamentTen = (event) => {
