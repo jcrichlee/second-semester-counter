@@ -55,11 +55,6 @@ body {
     opacity: 1;
   }
 }
-.counter-container,
-.test-error-page,
-.not-found-page {
-  animation: fadeIn 2s cubic-bezier(1, 0, 0, 1);
-}
 .ten,
 .one,
 .clear,
