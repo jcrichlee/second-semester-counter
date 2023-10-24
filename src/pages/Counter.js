@@ -26,24 +26,28 @@ function Counter() {
     event.preventDefault();
     if (counter + 1 >= 999999999999999) setCounter(999999999999999);
     else setCounter((prev) => prev + 1);
+    if (counter + 1 >= 999999999999999) alert("You can't go above 999999999999999");
   };
 
   const handleDecreamentOne = (event) => {
     event.preventDefault();
     if (counter - 1 <= 0) setCounter(0);
     else setCounter((prev) => prev - 1);
+    if (counter - 1 <= 0) alert("You can't go below 0");
   };
 
   const handleIncreamentTen = (event) => {
     event.preventDefault();
     if (counter + 10 >= 999999999999999) setCounter(999999999999999);
     else setCounter((prev) => prev + 10);
+    if (counter + 10 >= 999999999999999) alert("You can't go above 999999999999999");
   };
 
   const handleDecreamentTen = (event) => {
     event.preventDefault();
     if (counter - 10 <= 0) setCounter(0);
     else setCounter((prev) => prev - 10);
+    if (counter - 10 <= 0) alert("You can't go below 0");
   };
 
   const handleClear = (event) => {
