@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Counter from "./pages/Counter";
 import NotFoundPage from "./pages/404";
 import ErrorBoundary from "./components/ErrorBoundary";
-import ErrorBoundaryTest from "./components/ErrorBoundaryTest";
+import ErrorBoundaryTest from "./pages/ErrorBoundaryTest";
 
 function App() {
   return (

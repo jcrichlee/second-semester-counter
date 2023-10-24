@@ -1,6 +1,6 @@
 import React from "react";
-import AgeError from "./AgeError";
-import ErrorBoundary from "./ErrorBoundary";
+import AgeError from "../components/AgeError";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 const ErrorBoundaryTest = () => {
   return [
