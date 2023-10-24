@@ -2,7 +2,31 @@
   margin: 0;
   box-sizing: border-box;
 }
-a{
+#my-tooltip {
+  position: absolute;
+  z-index: 999;
+  background: linear-gradient(114.95deg, #3a003c 0%, rgba(0, 71, 255, 0) 53.31%),
+    linear-gradient(180deg, #00647a 0%, #ffa7a7 100%),
+    linear-gradient(244.35deg, #ffb26a 0%, #c15151 50.58%, #00a3ff 100%),
+    linear-gradient(244.35deg, #e03f3f 0%, #001665 49.48%, #ff0000 100%),
+    radial-gradient(100% 233.99% at 0% 100%, #ff0000 0%, #ad00ff 100%),
+    linear-gradient(307.27deg, #096f5c 0.37%, #687eb5 50.19%, #8877ce 100%),
+    radial-gradient(
+      100% 140% at 100% 0%,
+      #ff00c7 0%,
+      #006c7a 49.48%,
+      #760000 100%
+    );
+  background-blend-mode: overlay, overlay, overlay, overlay, difference,
+    color-dodge, normal;
+  color: white;
+  border-radius: 0.25rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+a {
   text-decoration: none;
   color: bisque;
 }
@@ -38,7 +62,7 @@ body {
 .counter-label {
   background-color: transparent;
   color: bisque;
-  border-bottom: .125rem solid;
+  border-bottom: 0.125rem solid;
   border-radius: 0;
   font-size: 5.5rem;
   text-align: center;
@@ -133,7 +157,7 @@ button {
   gap: 1rem;
   background-color: rgb(36, 15, 12);
   color: antiquewhite;
-  border: .125rem solid tomato;
+  border: 0.125rem solid tomato;
   padding: 1.5rem;
   width: 25.5rem;
 }
@@ -146,14 +170,14 @@ button {
   width: 100%;
   height: 2.5rem;
   font-size: 1rem;
-  border: .125rem solid rgba(216, 191, 216, 0.377);
+  border: 0.125rem solid rgba(216, 191, 216, 0.377);
   color: tomato;
 }
 .ages button:hover {
   background-color: tomato;
   color: #141414;
 }
-footer{
+footer {
   color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -161,11 +185,11 @@ footer{
   gap: 1rem;
 }
 footer a,
-footer p{
-  padding-left: .5rem;
+footer p {
+  padding-left: 0.5rem;
   text-align: center;
 }
-.footer-text a{
+.footer-text a {
   color: aliceblue;
 }
 @media screen and (max-width: 37.5rem) {
@@ -215,7 +239,7 @@ footer p{
   }
 }
 @media screen and (max-width: 23.4375rem) {
-  .ages{
+  .ages {
     flex-direction: column;
   }
 }
@@ -227,7 +251,7 @@ footer p{
     font-size: 2rem;
     text-align: center;
   }
-  .all-ages{
+  .all-ages {
     padding-top: 1rem;
   }
   .all-ages h1 {
@@ -244,9 +268,9 @@ footer p{
     font-size: 1rem;
     text-align: center;
   }
-  
-  .all-ages{
-    padding-top: .75rem;
+
+  .all-ages {
+    padding-top: 0.75rem;
   }
 }
 @media screen and (max-width: 8.75rem) {
@@ -254,8 +278,8 @@ footer p{
     font-size: 0.75rem;
     text-align: center;
   }
-  
-  .all-ages{
-    padding-top: .5rem;
+
+  .all-ages {
+    padding-top: 0.5rem;
   }
 }
