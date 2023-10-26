@@ -3,43 +3,37 @@ import "./Preloader.css"; // Import the CSS file for styling
 
 const Preloader = () => {
   return (
-    <div class="kart-loader">
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
-      <div class="sheath">
-        <div class="segment"></div>
-      </div>
+    <div class="cssload-wrap">
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
+      <div class="cssload-circle"></div>
     </div>
   );
 };
